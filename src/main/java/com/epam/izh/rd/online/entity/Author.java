@@ -20,7 +20,7 @@ import java.util.Objects;
  */
 public class Author {
     private String name;
-    private String LastName;
+    private String lastName;
     private LocalDate birthdate;
     private String country;
 
@@ -29,7 +29,7 @@ public class Author {
 
     public Author(String name, String lastName, LocalDate birthdate, String country) {
         this.name = name;
-        LastName = lastName;
+        this.lastName = lastName;
         this.birthdate = birthdate;
         this.country = country;
     }
@@ -43,11 +43,11 @@ public class Author {
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        this.lastName = lastName;
     }
 
     public LocalDate getBirthdate() {
@@ -72,21 +72,21 @@ public class Author {
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
         return Objects.equals(name, author.name) &&
-                Objects.equals(LastName, author.LastName) &&
+                Objects.equals(lastName, author.lastName) &&
                 Objects.equals(birthdate, author.birthdate) &&
                 Objects.equals(country, author.country);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, LastName, birthdate, country);
+        return Objects.hash(name, lastName, birthdate, country);
     }
 
     @Override
     public String toString() {
         return "Author{" +
                 "name='" + name + '\'' +
-                ", LastName='" + LastName + '\'' +
+                ", LastName='" + lastName + '\'' +
                 ", birthdate=" + birthdate +
                 ", country='" + country + '\'' +
                 '}';
